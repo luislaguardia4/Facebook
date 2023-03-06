@@ -1,155 +1,200 @@
-package feb23;
+package swingex;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import java.awt.Toolkit;
 import java.awt.Color;
-import javax.swing.border.BevelBorder;
-import javax.swing.SwingConstants;
 import java.awt.Font;
-import java.awt.Dialog.ModalExclusionType;
+import javax.swing.SwingConstants;
+import java.awt.Panel;
 import javax.swing.JCheckBox;
+import javax.swing.JRadioButton;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.MatteBorder;
 
-public class Home implements ActionListener  {
-
-	private static JLabel userlabel;
+public class LabelDemo implements ActionListener {
+	
+	private static JFrame laguardia_gamboa;
+	private static JPanel panel;
+	private static JLabel lblNewLabel;
+	private static JLabel userLabel;
 	private static JTextField userText;
 	private static JLabel passwordLabel;
 	private static JPasswordField passwordText;
 	private static JButton btnLogIn;
-	private static JLabel success;
-	private static JLabel lblConnectWithFriends;
-	private static JLabel lblAroundYouOn;
-	private static JLabel lblWelcomeToFacebook;
-	private static JButton btnNewButton;
-	private static JButton btnNewButton_1;
-
-	/**
-	 * Launch the application.
-	 */
+	private static JLabel frame;
+	private static JButton btnForgotPass;
+	private static JButton btnNewAccount;
+	private static JLabel lblNewLabel_2;
+	private static JLabel lblNewLabel_3;
+	private static Panel panel_1;
+	private static Panel panel_2;
+	private static JRadioButton RDbtnShowPass;
+	
 	public static void main(String[] args) {
-		JPanel panel = new JPanel();
-		panel.setBackground(new Color(218, 219, 220));
-		JFrame frmHttpswwwfacebookcomhomephp = new JFrame();
-		frmHttpswwwfacebookcomhomephp.setTitle("https://www.facebook.com/home.php");
-		frmHttpswwwfacebookcomhomephp.setModalExclusionType(ModalExclusionType.APPLICATION_EXCLUDE);
-		frmHttpswwwfacebookcomhomephp.setSize(1079, 492);
-		frmHttpswwwfacebookcomhomephp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmHttpswwwfacebookcomhomephp.getContentPane().add(panel);
+
+		laguardia_gamboa = new JFrame();
+		laguardia_gamboa.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\L O N O V O\\Downloads\\LOGO.jpg"));
+		laguardia_gamboa.setTitle("https://www.facebook.com");
+		panel = new JPanel();
+		panel.setBorder(null);
+		panel.setBackground(new Color(233, 233, 233));
+		laguardia_gamboa.setSize(1212,613);
+		laguardia_gamboa.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		laguardia_gamboa.getContentPane().add(panel);
+		
 		panel.setLayout(null);
 		
-		userlabel = new JLabel("Username:");
-		userlabel.setBounds(590, 106, 80, 25);
-		panel.add(userlabel);
-		
-		userText = new JTextField(20);
-		userText.setBounds(694, 106, 165, 25);
-		panel.add(userText);
-		
-		passwordLabel = new JLabel("Password:");
-		passwordLabel.setBounds(590, 168, 80, 25);
-		panel.add(passwordLabel);
-		
-		passwordText = new JPasswordField();
-		passwordText.setBounds(694, 168, 165, 25);
-		panel.add(passwordText);
-		
-		btnLogIn = new JButton("Log In");
-		btnLogIn.setBackground(new Color(0, 128, 255));
-		btnLogIn.setBounds(664, 278, 209, 45);
-		btnLogIn.addActionListener(new Home());
-		panel.add(btnLogIn);
-		
-		success = new JLabel("");
-		success.setBounds(610, 242, 300, 25);
-		panel.add(success);
-		
-		JLabel lblNewLabel = new JLabel("FACEBOOK");
+		lblNewLabel = new JLabel("facebook");
 		lblNewLabel.setForeground(new Color(0, 128, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 80));
-		lblNewLabel.setBounds(24, 71, 466, 102);
+		lblNewLabel.setBackground(new Color(238, 238, 238));
+		lblNewLabel.setBounds(75, 130, 441, 103);
 		panel.add(lblNewLabel);
 		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("Show Password");
-		chckbxNewCheckBox.setBackground(new Color(218, 219, 220));
-		chckbxNewCheckBox.setForeground(new Color(0, 0, 0));
-		chckbxNewCheckBox.setBounds(590, 212, 157, 23);
-		panel.add(chckbxNewCheckBox);
+		lblNewLabel_2 = new JLabel("Connect with friends and the world");
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 21));
+		lblNewLabel_2.setForeground(new Color(0, 0, 0));
+		lblNewLabel_2.setBounds(75, 229, 357, 44);
+		panel.add(lblNewLabel_2);
 		
-		lblConnectWithFriends = new JLabel("Connect with friends and the world");
-		lblConnectWithFriends.setFont(new Font("Dialog", Font.BOLD, 21));
-		lblConnectWithFriends.setBounds(34, 173, 360, 25);
-		panel.add(lblConnectWithFriends);
+		lblNewLabel_3 = new JLabel("around you on Facebook.");
+		lblNewLabel_3.setForeground(new Color(0, 0, 0));
+		lblNewLabel_3.setFont(new Font("Dialog", Font.BOLD, 21));
+		lblNewLabel_3.setBounds(75, 263, 280, 35);
+		panel.add(lblNewLabel_3);
 		
-		lblAroundYouOn = new JLabel("around you on Facebook.");
-		lblAroundYouOn.setFont(new Font("Dialog", Font.BOLD, 21));
-		lblAroundYouOn.setBounds(44, 195, 360, 25);
-		panel.add(lblAroundYouOn);
+		panel_1 = new Panel();
+		panel_1.setBackground(new Color(255, 255, 255));
+		panel_1.setBounds(699, 46, 357, 437);
+		panel.add(panel_1);
+		panel_1.setLayout(null);
 		
-		lblWelcomeToFacebook = new JLabel("Welcome To Facebook");
-		lblWelcomeToFacebook.setHorizontalAlignment(SwingConstants.CENTER);
-		lblWelcomeToFacebook.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblWelcomeToFacebook.setBounds(639, 45, 220, 25);
-		panel.add(lblWelcomeToFacebook);
+		userLabel = new JLabel("username:");
+		userLabel.setBounds(29, 12, 92, 18);
+		panel_1.add(userLabel);
+		userLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
 		
-		btnNewButton = new JButton("Forgot Password?");
-		btnNewButton.addActionListener(new ActionListener() {
+		userText = new JTextField(20);
+		userText.setBounds(29, 38, 285, 44);
+		panel_1.add(userText);
+		userText.setForeground(new Color(0, 0, 0));
+		userText.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		
+		passwordText = new JPasswordField();
+		passwordText.setBounds(29, 129, 285, 44);
+		panel_1.add(passwordText);
+		passwordText.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		passwordText.setForeground(new Color(0, 0, 0));
+		
+		passwordLabel = new JLabel("password:");
+		passwordLabel.setBounds(29, 94, 92, 36);
+		panel_1.add(passwordLabel);
+		passwordLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
+		
+		RDbtnShowPass = new JRadioButton("");
+		RDbtnShowPass.setBounds(322, 137, 21, 24);
+		panel_1.add(RDbtnShowPass);
+		RDbtnShowPass.setForeground(new Color(0, 0, 0));
+		RDbtnShowPass.setBackground(new Color(255, 255, 255));
+		
+		btnLogIn = new JButton("Log In");
+		btnLogIn.setBounds(29, 197, 285, 53);
+		panel_1.add(btnLogIn);
+		btnLogIn.setForeground(new Color(255, 255, 255));
+		btnLogIn.setBackground(new Color(0, 128, 255));
+		btnLogIn.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		
+		btnForgotPass = new JButton("forgot password?");
+		btnForgotPass.setBounds(103, 274, 156, 26);
+		panel_1.add(btnForgotPass);
+		btnForgotPass.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ForgotPassword action = new ForgotPassword();
-				action.setVisible(true);
+				
+			newpass pass = new newpass();
+			pass.setVisible(true);
+			
 			}
 		});
-		btnNewButton.setBackground(new Color(0, 128, 255));
-		btnNewButton.setBounds(715, 334, 119, 23);
-		panel.add(btnNewButton);
+		btnForgotPass.setBackground(new Color(255, 255, 255));
+		btnForgotPass.setForeground(new Color(0, 128, 255));
+		btnForgotPass.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		
-		btnNewButton_1 = new JButton("Create new account");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		btnNewAccount = new JButton("Create new account");
+		btnNewAccount.setBounds(52, 350, 253, 53);
+		panel_1.add(btnNewAccount);
+		btnNewAccount.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				RegistrationForm Account = new  RegistrationForm();
-				Account.setVisible(true);
+				
+				create acc = new create();
+				acc.setVisible(true);
+				
 			}
 		});
-		btnNewButton_1.setBackground(new Color(0, 255, 0));
-		btnNewButton_1.setBounds(664, 368, 209, 45);
-		panel.add(btnNewButton_1);
-		chckbxNewCheckBox.addMouseListener(new MouseAdapter() {
-			@Override
+		btnNewAccount.setBackground(new Color(0, 255, 128));
+		btnNewAccount.setForeground(new Color(255, 255, 255));
+		btnNewAccount.setFont(new Font("Tahoma", Font.BOLD, 17));
+		
+		panel_2 = new Panel();
+		panel_2.setBackground(new Color(192, 192, 192));
+		panel_2.setBounds(0, 319, 357, 2);
+		panel_1.add(panel_2);
+		btnLogIn.addActionListener(new LabelDemo());
+		RDbtnShowPass.addMouseListener(new MouseAdapter() {
+		
 			public void mouseClicked(MouseEvent e) {
-				if (chckbxNewCheckBox.isSelected()) {
-				      passwordText.setEchoChar((char)0); //password = JPasswordField
-				   } else {
-					   passwordText.setEchoChar('\u25cf');
-				   }
+			if (RDbtnShowPass.isSelected()) {
+				passwordText.setEchoChar((char)0);
+			} else {
+				passwordText.setEchoChar('\u25cf');
 			}
-		});
-		frmHttpswwwfacebookcomhomephp.setVisible(true);
+			
+		}
+			});
+		
+		laguardia_gamboa.setVisible(true);
+		
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		  String user = userText.getText();
-		  String password = passwordText.getText(); 
-		  
-		  if(user.equals("Admin") && password.equals("password1")) {
-			  success.setText("Login Successful!!");
-		  }
-		  else if
-		  (user.equals("Secretary") && password.equals("password2")) {
-			  success.setText("Login Successful!!");
-		  }
-		  else {
-		  success.setText("Incorrect username and password");
-		  }
+		String user = userText.getText();
+		String password = passwordText.getText();
+		System.out.println(user + ", " + password);
+		
+
+		if(user.equals("laguardia") &&  password.equals("luis123")) {
+			
+			success next = new success();
+			next.setVisible(true);
+			dispose();
+			
+
+		}
+		else if(user.equals("gamboa") &&  password.equals("earl123")) {
+			success next = new success();
+			next.setVisible(true);
+			dispose();
+	
+		
+		} else {
+			JOptionPane.showMessageDialog(frame, "INVALID USERNAME AND PASSWORD!");
+
+		}
+		
+		
 	}
+
+	private void dispose() {
+
+	}	
 }
